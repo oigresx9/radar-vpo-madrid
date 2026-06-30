@@ -1,0 +1,56 @@
+# Cada fuente = un adapter "generic_html" (diff de contenido de una URL)
+# o un adapter específico (bocm, etc). Añadir fuente = añadir entrada aquí.
+# urgencia_keywords: si el texto nuevo contiene alguna, se marca CRITICO automáticamente.
+
+sources:
+  - id: comunidad_madrid_vivienda_protegida
+    nombre: "Comunidad de Madrid - Vivienda Protegida"
+    tipo: generic_html
+    url: "https://www.comunidad.madrid/servicios/vivienda/vivienda-protegida"
+    municipio: "Comunidad de Madrid"
+
+  - id: comunidad_madrid_avs
+    nombre: "Agencia de Vivienda Social"
+    tipo: generic_html
+    url: "https://www.comunidad.madrid/servicios/vivienda"
+    municipio: "Comunidad de Madrid"
+
+  - id: emvs_sorteos
+    nombre: "EMVS Madrid - Sorteos de vivienda"
+    tipo: generic_html
+    url: "https://www.emvs.es/Vivienda/RPSV"
+    municipio: "Madrid capital"
+
+  - id: emvs_nuevas_promociones
+    nombre: "EMVS Madrid - Nuevas promociones"
+    tipo: generic_html
+    url: "https://www.madrid.es/portales/munimadrid/es/Inicio/Vivienda-urbanismo-y-obras/Vivienda/Nuevas-promociones-de-vivienda/?vgnextfmt=default&vgnextoid=62f61fc6adc00610VgnVCM1000001d4a900aRCRD&vgnextchannel=a2e331d3b28fe410VgnVCM1000000b205a0aRCRD"
+    municipio: "Madrid capital"
+
+  - id: bocm_sumario
+    nombre: "BOCM - Sumario diario"
+    tipo: bocm
+    url: "https://www.bocm.es/sumario-actual"
+    municipio: "Comunidad de Madrid"
+
+  - id: plan_vive
+    nombre: "Plan Vive Madrid (Avalon, lotes 1 y 2)"
+    tipo: generic_html
+    url: "https://vivetuavalon.com/plan-vive-home/"
+    municipio: "Multi-municipio"
+
+# Palabras clave que disparan urgencia CRITICO si aparecen en el contenido cambiado
+urgencia_keywords_critico:
+  - "inscripciones abiertas"
+  - "inscripción abierta"
+  - "plazo de solicitud"
+  - "sorteo"
+  - "plazo abierto"
+  - "ya puedes inscribirte"
+
+urgencia_keywords_importante:
+  - "próximamente"
+  - "comercialización"
+  - "nueva promoción"
+  - "licitación"
+  - "nueva parcela"
