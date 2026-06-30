@@ -1,0 +1,38 @@
+name: Radar VPO Madrid
+
+on:
+  schedule:
+    # GitHub Actions no garantiza precisión por debajo de ~5 min reales;
+    # cada 15 min es lo más fiable que se puede prometer en un cron gratuito.
+    - cron: "*/15 * * * *"
+  workflow_dispatch: {}   # permite lanzarlo manualmente desde la pestaña Actions
+
+permissions:
+  contents: write   # necesario para poder commitear data/radar.db actualizada
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Ejecutar radar
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python src/main.py
+
+      - name: Guardar historial (data/radar.db) en el repo
+        run: |
+          git config user.name "radar-vpo-bot"
+          git config user.email "actions@github.com"
+          git add data/radar.db
+          git diff --staged --quiet || git commit -m "chore: actualizar historial radar [skip ci]"
+          git push
