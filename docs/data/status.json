@@ -1,57 +1,113 @@
 {
-  "generated_at": "2026-07-05T16:55:17.587800+00:00",
+  "generated_at": "2026-07-05T17:01:53.811822+00:00",
   "sources": [
     {
       "id": "comunidad_madrid_vivienda_protegida",
       "nombre": "Comunidad de Madrid - Vivienda Protegida",
       "municipio": "Comunidad de Madrid",
       "url": "https://www.comunidad.madrid/servicios/vivienda/vivienda-protegida",
-      "last_checked": "2026-06-30T13:38:27.954566+00:00"
+      "last_checked": "2026-07-05T17:01:37.827934+00:00"
     },
     {
       "id": "comunidad_madrid_avs",
       "nombre": "Agencia de Vivienda Social",
       "municipio": "Comunidad de Madrid",
       "url": "https://www.comunidad.madrid/servicios/vivienda",
-      "last_checked": "2026-07-03T14:51:39.485028+00:00"
+      "last_checked": "2026-07-05T17:01:40.341444+00:00"
     },
     {
       "id": "emvs_nuevas_promociones",
       "nombre": "EMVS Madrid - Nuevas promociones",
       "municipio": "Madrid capital",
       "url": "https://www.madrid.es/portales/munimadrid/es/Inicio/Vivienda-urbanismo-y-obras/Vivienda/Nuevas-promociones-de-vivienda/?vgnextfmt=default&vgnextoid=62f61fc6adc00610VgnVCM1000001d4a900aRCRD&vgnextchannel=a2e331d3b28fe410VgnVCM1000000b205a0aRCRD",
-      "last_checked": "2026-06-30T13:38:32.613567+00:00"
+      "last_checked": "2026-07-05T17:01:42.891693+00:00"
     },
     {
       "id": "bocm_sumario",
       "nombre": "BOCM - Portada",
       "municipio": "Comunidad de Madrid",
       "url": "https://www.bocm.es/",
-      "last_checked": "2026-07-04T08:06:32.801791+00:00"
+      "last_checked": "2026-07-05T17:01:47.696635+00:00"
     },
     {
       "id": "plan_vive",
       "nombre": "Plan Vive Madrid (Avalon, lotes 1 y 2)",
       "municipio": "Multi-municipio",
       "url": "https://vivetuavalon.com/plan-vive-home/",
-      "last_checked": "2026-06-30T13:38:36.820244+00:00"
+      "last_checked": "2026-07-05T17:01:50.409666+00:00"
     },
     {
       "id": "convive_madrid_sogeviso",
       "nombre": "ConVive Madrid (Sogeviso, Lote 3 Plan Vive)",
       "municipio": "San Sebastián de los Reyes, Tres Cantos, Alcorcón, Alcalá de Henares, Getafe",
       "url": "https://www.convivemadridalquila.com/",
-      "last_checked": "2026-07-05T16:55:17.275168+00:00"
+      "last_checked": "2026-07-05T17:01:52.395182+00:00"
     },
     {
       "id": "sogeviso_proyectos",
       "nombre": "Sogeviso - Proyectos en comercialización",
       "municipio": "Multi-municipio",
       "url": "https://www.sogevisoalquila.com/proyectos/1",
-      "last_checked": "2026-07-05T16:55:17.582791+00:00"
+      "last_checked": "2026-07-05T17:01:53.281786+00:00"
     }
   ],
   "alerts": [
+    {
+      "source_name": "Sogeviso - Proyectos en comercialización",
+      "municipio": "Multi-municipio",
+      "urgencia": "INFORMATIVO",
+      "resumen": "‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
+      "url": "https://www.sogevisoalquila.com/proyectos/1",
+      "detected_at": "2026-07-05T17:01:53.283192+00:00"
+    },
+    {
+      "source_name": "ConVive Madrid (Sogeviso, Lote 3 Plan Vive)",
+      "municipio": "San Sebastián de los Reyes, Tres Cantos, Alcorcón, Alcalá de Henares, Getafe",
+      "urgencia": "INFORMATIVO",
+      "resumen": "Convive Madrid Web Nuevas Promociones de Vivienda Asequible en Madrid Hogares entre un 20 y un 30% por debajo del precio del mercado. DESCUBRE LAS VIVIENDAS Convive Madrid Web Tu nuevo hogar en la Comunidad de Madrid El Plan Vive es una iniciativa que busca ofrecer soluciones de alquiler asequible a personas de todas las edades y necesidades. Su objetivo es facilitar el acceso a viviendas de calid…",
+      "url": "https://www.convivemadridalquila.com/",
+      "detected_at": "2026-07-05T17:01:52.397533+00:00"
+    },
+    {
+      "source_name": "Plan Vive Madrid (Avalon, lotes 1 y 2)",
+      "municipio": "Multi-municipio",
+      "urgencia": "INFORMATIVO",
+      "resumen": "Nombre* Apellido 1* Apellido 2 Teléfono* Correo electrónico* Madrid Affordable Housing Development 2021, S.A. , como responsable del tratamiento, te informa que, con base a tu petición, tratará tus datos identificativos y de contacto para enviarte alertas informativas sobre la apertura de las listas de inscripción en los municipios en que estés interesado para que puedas inscribir tu candidatura a…",
+      "url": "https://vivetuavalon.com/plan-vive-home/",
+      "detected_at": "2026-07-05T17:01:50.410893+00:00"
+    },
+    {
+      "source_name": "BOCM - Portada",
+      "municipio": "Comunidad de Madrid",
+      "urgencia": "INFORMATIVO",
+      "resumen": "BOCM Nº 158 Sábado 04 de Julio de 2026 Boletín Descargar el boletín completo Sumario Ver Descargar Descargar",
+      "url": "https://www.bocm.es/",
+      "detected_at": "2026-07-05T17:01:47.697907+00:00"
+    },
+    {
+      "source_name": "EMVS Madrid - Nuevas promociones",
+      "municipio": "Madrid capital",
+      "urgencia": "INFORMATIVO",
+      "resumen": "Volver Nuevas promociones de vivienda Escuchar Una de las principales actividades que desarrolla EMVS Madrid desde su creación es la promoción de viviendas de protección pública, con objeto de dar soluciones de vivienda a los ciudadanos de Madrid. Las nuevas viviendas se construyen teniendo en cuenta las necesidades y el perfil de las personas que las van a habitar, abarcando un amplio espectro de…",
+      "url": "https://www.madrid.es/portales/munimadrid/es/Inicio/Vivienda-urbanismo-y-obras/Vivienda/Nuevas-promociones-de-vivienda/?vgnextfmt=default&vgnextoid=62f61fc6adc00610VgnVCM1000001d4a900aRCRD&vgnextchannel=a2e331d3b28fe410VgnVCM1000000b205a0aRCRD",
+      "detected_at": "2026-07-05T17:01:42.893262+00:00"
+    },
+    {
+      "source_name": "Agencia de Vivienda Social",
+      "municipio": "Comunidad de Madrid",
+      "urgencia": "INFORMATIVO",
+      "resumen": "Vivienda, urbanismo y construcción Te puede interesar Urbanismo Información general de vivienda Arquitectura y edificación Vivienda Protegida Alquiler Rehabilitación Locales y garajes Madrid Accesible Plan Vive: Viviendas en alquiler a precio asequible Una de las apuestas del Gobierno de la Comunidad de Madrid para aumentar la oferta de viviendas en la región. Necesito una vivienda Queremos ayudar…",
+      "url": "https://www.comunidad.madrid/servicios/vivienda",
+      "detected_at": "2026-07-05T17:01:40.343118+00:00"
+    },
+    {
+      "source_name": "Comunidad de Madrid - Vivienda Protegida",
+      "municipio": "Comunidad de Madrid",
+      "urgencia": "CRITICO",
+      "resumen": "Vivienda Protegida Descubre todo lo que te interesa sobre Vivienda Protegida Vivienda Protegida de nueva construcción Calificación de Viviendas Protegidas. Información a promotores Aspectos Técnicos de la Calificación de Viviendas Protegidas Visado de contratos sobre Vivienda Protegida Información sobre la necesidad del visado de contratos tanto de compraventa como de alquiler de VPP Autorizacione…",
+      "url": "https://www.comunidad.madrid/servicios/vivienda/vivienda-protegida",
+      "detected_at": "2026-07-05T17:01:37.829141+00:00"
+    },
     {
       "source_name": "BOCM - Portada",
       "municipio": "Comunidad de Madrid",
