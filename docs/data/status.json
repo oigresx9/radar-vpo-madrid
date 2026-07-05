@@ -1,0 +1,120 @@
+{
+  "generated_at": "2026-07-05T16:55:17.587800+00:00",
+  "sources": [
+    {
+      "id": "comunidad_madrid_vivienda_protegida",
+      "nombre": "Comunidad de Madrid - Vivienda Protegida",
+      "municipio": "Comunidad de Madrid",
+      "url": "https://www.comunidad.madrid/servicios/vivienda/vivienda-protegida",
+      "last_checked": "2026-06-30T13:38:27.954566+00:00"
+    },
+    {
+      "id": "comunidad_madrid_avs",
+      "nombre": "Agencia de Vivienda Social",
+      "municipio": "Comunidad de Madrid",
+      "url": "https://www.comunidad.madrid/servicios/vivienda",
+      "last_checked": "2026-07-03T14:51:39.485028+00:00"
+    },
+    {
+      "id": "emvs_nuevas_promociones",
+      "nombre": "EMVS Madrid - Nuevas promociones",
+      "municipio": "Madrid capital",
+      "url": "https://www.madrid.es/portales/munimadrid/es/Inicio/Vivienda-urbanismo-y-obras/Vivienda/Nuevas-promociones-de-vivienda/?vgnextfmt=default&vgnextoid=62f61fc6adc00610VgnVCM1000001d4a900aRCRD&vgnextchannel=a2e331d3b28fe410VgnVCM1000000b205a0aRCRD",
+      "last_checked": "2026-06-30T13:38:32.613567+00:00"
+    },
+    {
+      "id": "bocm_sumario",
+      "nombre": "BOCM - Portada",
+      "municipio": "Comunidad de Madrid",
+      "url": "https://www.bocm.es/",
+      "last_checked": "2026-07-04T08:06:32.801791+00:00"
+    },
+    {
+      "id": "plan_vive",
+      "nombre": "Plan Vive Madrid (Avalon, lotes 1 y 2)",
+      "municipio": "Multi-municipio",
+      "url": "https://vivetuavalon.com/plan-vive-home/",
+      "last_checked": "2026-06-30T13:38:36.820244+00:00"
+    },
+    {
+      "id": "convive_madrid_sogeviso",
+      "nombre": "ConVive Madrid (Sogeviso, Lote 3 Plan Vive)",
+      "municipio": "San Sebastián de los Reyes, Tres Cantos, Alcorcón, Alcalá de Henares, Getafe",
+      "url": "https://www.convivemadridalquila.com/",
+      "last_checked": "2026-07-05T16:55:17.275168+00:00"
+    },
+    {
+      "id": "sogeviso_proyectos",
+      "nombre": "Sogeviso - Proyectos en comercialización",
+      "municipio": "Multi-municipio",
+      "url": "https://www.sogevisoalquila.com/proyectos/1",
+      "last_checked": "2026-07-05T16:55:17.582791+00:00"
+    }
+  ],
+  "alerts": [
+    {
+      "source_name": "BOCM - Portada",
+      "municipio": "Comunidad de Madrid",
+      "urgencia": "INFORMATIVO",
+      "resumen": "BOCM Nº 158 Sábado 04 de Julio de 2026 Boletín Descargar el boletín completo Sumario Ver Descargar Descargar",
+      "url": "https://www.bocm.es/",
+      "detected_at": "2026-07-04T08:06:32.803953+00:00"
+    },
+    {
+      "source_name": "Agencia de Vivienda Social",
+      "municipio": "Comunidad de Madrid",
+      "urgencia": "INFORMATIVO",
+      "resumen": "Vivienda, urbanismo y construcción Te puede interesar Urbanismo Información general de vivienda Arquitectura y edificación Vivienda Protegida Alquiler Rehabilitación Locales y garajes Madrid Accesible Plan Vive: Viviendas en alquiler a precio asequible Una de las apuestas del Gobierno de la Comunidad de Madrid para aumentar la oferta de viviendas en la región. Necesito una vivienda Queremos ayudar…",
+      "url": "https://www.comunidad.madrid/servicios/vivienda",
+      "detected_at": "2026-07-03T14:51:39.487128+00:00"
+    },
+    {
+      "source_name": "BOCM - Portada",
+      "municipio": "Comunidad de Madrid",
+      "urgencia": "INFORMATIVO",
+      "resumen": "BOCM Nº 157 Viernes 03 de Julio de 2026 Boletín Descargar el boletín completo Sumario Ver Descargar Descargar",
+      "url": "https://www.bocm.es/",
+      "detected_at": "2026-07-03T10:07:38.510186+00:00"
+    },
+    {
+      "source_name": "Agencia de Vivienda Social",
+      "municipio": "Comunidad de Madrid",
+      "urgencia": "INFORMATIVO",
+      "resumen": "Vivienda, urbanismo y construcción Te puede interesar Urbanismo Información general de vivienda Arquitectura y edificación Vivienda Protegida Alquiler Rehabilitación Locales y garajes Madrid Accesible Plan Vive: Viviendas en alquiler a precio asequible Una de las apuestas del Gobierno de la Comunidad de Madrid para aumentar la oferta de viviendas en la región. Necesito una vivienda Queremos ayudar…",
+      "url": "https://www.comunidad.madrid/servicios/vivienda",
+      "detected_at": "2026-07-03T10:07:32.862856+00:00"
+    },
+    {
+      "source_name": "Agencia de Vivienda Social",
+      "municipio": "Comunidad de Madrid",
+      "urgencia": "INFORMATIVO",
+      "resumen": "Vivienda, urbanismo y construcción Te puede interesar Urbanismo Información general de vivienda Arquitectura y edificación Vivienda Protegida Alquiler Rehabilitación Locales y garajes Madrid Accesible Plan Vive: Viviendas en alquiler a precio asequible Una de las apuestas del Gobierno de la Comunidad de Madrid para aumentar la oferta de viviendas en la región. Necesito una vivienda Queremos ayudar…",
+      "url": "https://www.comunidad.madrid/servicios/vivienda",
+      "detected_at": "2026-07-02T22:37:42.995007+00:00"
+    },
+    {
+      "source_name": "BOCM - Portada",
+      "municipio": "Comunidad de Madrid",
+      "urgencia": "INFORMATIVO",
+      "resumen": "BOCM Nº 156 Jueves 02 de Julio de 2026 Boletín Descargar el boletín completo Sumario Ver Descargar Descargar",
+      "url": "https://www.bocm.es/",
+      "detected_at": "2026-07-02T09:33:35.805106+00:00"
+    },
+    {
+      "source_name": "Agencia de Vivienda Social",
+      "municipio": "Comunidad de Madrid",
+      "urgencia": "INFORMATIVO",
+      "resumen": "Vivienda, urbanismo y construcción Te puede interesar Urbanismo Información general de vivienda Arquitectura y edificación Vivienda Protegida Alquiler Rehabilitación Locales y garajes Madrid Accesible Plan Vive: Viviendas en alquiler a precio asequible Una de las apuestas del Gobierno de la Comunidad de Madrid para aumentar la oferta de viviendas en la región. Necesito una vivienda Queremos ayudar…",
+      "url": "https://www.comunidad.madrid/servicios/vivienda",
+      "detected_at": "2026-07-01T13:27:24.205280+00:00"
+    },
+    {
+      "source_name": "BOCM - Portada",
+      "municipio": "Comunidad de Madrid",
+      "urgencia": "INFORMATIVO",
+      "resumen": "BOCM Nº 155 Miércoles 01 de Julio de 2026 Boletín Descargar el boletín completo Sumario Ver Descargar Descargar",
+      "url": "https://www.bocm.es/",
+      "detected_at": "2026-07-01T10:34:09.636282+00:00"
+    }
+  ]
+}
