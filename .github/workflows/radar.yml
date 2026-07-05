@@ -1,38 +1,182 @@
-name: Radar VPO Madrid
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Radar VPO Madrid</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --bg: #f7f6f2;
+    --card: #ffffff;
+    --border: #e4e2da;
+    --text: #26221c;
+    --text-muted: #6b6659;
+    --critico-bg: #fcebeb; --critico-text: #791f1f; --critico-border: #f09595;
+    --importante-bg: #faeeda; --importante-text: #633806; --importante-border: #ef9f27;
+    --informativo-bg: #eaf3de; --informativo-text: #27500a; --informativo-border: #97c459;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--bg); color: var(--text); padding: 24px 16px 64px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  h1 { font-size: 22px; font-weight: 500; margin: 0 0 4px; }
+  .subtitle { color: var(--text-muted); font-size: 14px; margin: 0 0 28px; }
+  h2 { font-size: 16px; font-weight: 500; margin: 32px 0 12px; }
+  .sources-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; }
+  .source-card {
+    background: var(--card); border: 0.5px solid var(--border); border-radius: 12px;
+    padding: 12px 14px; font-size: 13px;
+  }
+  .source-card .name { font-weight: 500; margin-bottom: 4px; }
+  .source-card .meta { color: var(--text-muted); font-size: 12px; }
+  .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; background: #97c459; }
+  .alert-card {
+    background: var(--card); border: 0.5px solid var(--border); border-radius: 12px;
+    padding: 14px 16px; margin-bottom: 10px;
+  }
+  .alert-top { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+  .badge { font-size: 12px; font-weight: 500; padding: 3px 10px; border-radius: 100px; }
+  .badge.CRITICO { background: var(--critico-bg); color: var(--critico-text); }
+  .badge.IMPORTANTE { background: var(--importante-bg); color: var(--importante-text); }
+  .badge.INFORMATIVO { background: var(--informativo-bg); color: var(--informativo-text); }
+  .alert-source { font-weight: 500; font-size: 14px; }
+  .alert-municipio { color: var(--text-muted); font-size: 12px; }
+  .alert-resumen { font-size: 13px; color: var(--text); line-height: 1.5; margin: 6px 0; }
+  .alert-date { font-size: 12px; color: var(--text-muted); }
+  a { color: #185fa5; text-decoration: none; font-size: 13px; }
+  a:hover { text-decoration: underline; }
+  .empty { color: var(--text-muted); font-size: 14px; padding: 24px 0; text-align: center; }
+  .generated { color: var(--text-muted); font-size: 12px; margin-top: 40px; text-align: center; }
+  .inventory-note { color: var(--text-muted); font-size: 12px; margin: 0 0 16px; }
+  .inventory-group { margin-bottom: 20px; }
+  .inventory-source { font-weight: 500; font-size: 14px; margin-bottom: 6px; }
+  .inventory-table { width: 100%; border-collapse: collapse; background: var(--card); border: 0.5px solid var(--border); border-radius: 12px; overflow: hidden; font-size: 13px; }
+  .inventory-table th { text-align: left; padding: 8px 10px; background: #f0eee6; color: var(--text-muted); font-weight: 500; font-size: 12px; }
+  .inventory-table td { padding: 8px 10px; border-top: 0.5px solid var(--border); }
+  .inventory-table a { font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Radar VPO Madrid</h1>
+  <p class="subtitle" id="subtitle">Cargando...</p>
 
-on:
-  schedule:
-    # GitHub Actions no garantiza precisión por debajo de ~5 min reales;
-    # cada 15 min es lo más fiable que se puede prometer en un cron gratuito.
-    - cron: "*/15 * * * *"
-  workflow_dispatch: {}   # permite lanzarlo manualmente desde la pestaña Actions
+  <h2>Disponible para inscribirte hoy</h2>
+  <p class="inventory-note">Verificado manualmente el 5 jul 2026 directamente en las webs de comercialización oficiales. No se actualiza sola todavía — pide una revisión cuando quieras confirmar cambios.</p>
+  <div class="inventory-group">
+    <div class="inventory-source">Plan Vive I y III (Avalon)</div>
+    <table class="inventory-table">
+      <tr><th>Municipio</th><th>Tipo</th><th>Viviendas</th><th>Desde</th><th></th></tr>
+      <tr><td>Alcalá de Henares</td><td>VPPB</td><td>437</td><td>574€/mes</td><td><a href="https://vivetuavalon.com/plan-vive/inscription/?pack=P9" target="_blank" rel="noopener">Inscríbete</a></td></tr>
+      <tr><td>Colmenar Viejo</td><td>VPPB</td><td>282</td><td>488€/mes</td><td><a href="https://vivetuavalon.com/plan-vive/inscription/?pack=P10" target="_blank" rel="noopener">Inscríbete</a></td></tr>
+      <tr><td>Getafe</td><td>VPPB</td><td>373</td><td>578€/mes</td><td><a href="https://vivetuavalon.com/plan-vive/inscription/?pack=P11" target="_blank" rel="noopener">Inscríbete</a></td></tr>
+      <tr><td>Madrid (Valdebebas) — Lote 1</td><td>VPPL</td><td>441</td><td>796€/mes</td><td><a href="https://vivetuavalon.com/plan-vive/inscription/?pack=P7" target="_blank" rel="noopener">Inscríbete</a></td></tr>
+      <tr><td>Alcorcón</td><td>VPPB</td><td>549</td><td>529€/mes</td><td><a href="https://vivetuavalon.com/plan-vive/inscription/?pack=P6" target="_blank" rel="noopener">Inscríbete</a></td></tr>
+      <tr><td>Madrid (Valdebebas) — Lote 2</td><td>VPPL</td><td>335</td><td>903€/mes</td><td><a href="https://vivetuavalon.com/plan-vive/inscription/?pack=P1" target="_blank" rel="noopener">Inscríbete</a></td></tr>
+      <tr><td>Móstoles</td><td>VPPB</td><td>430</td><td>552€/mes</td><td><a href="https://vivetuavalon.com/plan-vive/inscription/?pack=P5" target="_blank" rel="noopener">Inscríbete</a></td></tr>
+      <tr><td>San Sebastián de los Reyes</td><td>VPPL</td><td>81</td><td>881€/mes</td><td><a href="https://vivetuavalon.com/plan-vive/inscription/?pack=P2" target="_blank" rel="noopener">Inscríbete</a></td></tr>
+      <tr><td>Torrejón de Ardoz</td><td>VPPB</td><td>137</td><td>575€/mes</td><td><a href="https://vivetuavalon.com/plan-vive/inscription/?pack=P4" target="_blank" rel="noopener">Inscríbete</a></td></tr>
+      <tr><td>Tres Cantos</td><td>VPPL</td><td>355</td><td>686€/mes</td><td><a href="https://vivetuavalon.com/plan-vive/inscription/?pack=P3" target="_blank" rel="noopener">Inscríbete</a></td></tr>
+    </table>
+  </div>
 
-permissions:
-  contents: write   # necesario para poder commitear data/radar.db actualizada
+  <div class="inventory-group">
+    <div class="inventory-source">ConVive Madrid — Lote 3 (Sogeviso)</div>
+    <table class="inventory-table">
+      <tr><th>Municipio</th><th>Dirección</th><th>Tipo</th><th></th></tr>
+      <tr><td>San Sebastián de los Reyes</td><td>Av. Arribes del Duero, 14-16</td><td>VPPL</td><td><a href="https://www.sogeviso.com/formulario-inscripcion-plan-vive-madrid/" target="_blank" rel="noopener">Inscríbete</a></td></tr>
+      <tr><td>Tres Cantos</td><td>C/ Letonia, 14</td><td>VPPL</td><td><a href="https://www.sogeviso.com/formulario-inscripcion-plan-vive-madrid/" target="_blank" rel="noopener">Inscríbete</a></td></tr>
+      <tr><td>Alcorcón</td><td>C/ África, 4 / C/ Ocho de Marzo, 2-bis</td><td>VPPB</td><td><a href="https://www.sogeviso.com/formulario-inscripcion-plan-vive-madrid/" target="_blank" rel="noopener">Inscríbete</a></td></tr>
+      <tr><td>Alcalá de Henares</td><td>C/ Fernando IV, 1 y 5</td><td>VPPB</td><td><a href="https://www.sogeviso.com/formulario-inscripcion-plan-vive-madrid/" target="_blank" rel="noopener">Inscríbete</a></td></tr>
+      <tr><td>Getafe</td><td>C/ Juana Gutiérrez y Bella Dorotea</td><td>VPPB</td><td><a href="https://www.sogeviso.com/formulario-inscripcion-plan-vive-madrid/" target="_blank" rel="noopener">Inscríbete</a></td></tr>
+    </table>
+  </div>
 
-jobs:
-  check:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+  <div class="inventory-group">
+    <div class="inventory-source">Agencia de Vivienda Social (AVS)</div>
+    <table class="inventory-table">
+      <tr><th>Programa</th><th>Plazo</th><th></th></tr>
+      <tr><td>Situación de especial necesidad</td><td>Sin plazo, inscripción permanente</td><td><a href="https://www.comunidad.madrid/servicios/vivienda/vivienda-protegida" target="_blank" rel="noopener">Ver / Inscríbete</a></td></tr>
+    </table>
+  </div>
 
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
+  <div class="inventory-group">
+    <div class="inventory-source">Próximas aperturas (todavía cerradas, para vigilar)</div>
+    <table class="inventory-table">
+      <tr><th>Municipio</th><th>Apertura estimada</th></tr>
+      <tr><td>Daganzo de Arriba (Plan Vive III)</td><td>Julio 2026</td></tr>
+      <tr><td>Aranjuez, Villalbilla, Navalcarnero (Plan Vive III)</td><td>Septiembre 2026</td></tr>
+      <tr><td>Torrelodones (Plan Vive I)</td><td>Noviembre 2026</td></tr>
+    </table>
+  </div>
 
-      - name: Instalar dependencias
-        run: pip install -r requirements.txt
+  <h2>Fuentes monitorizadas</h2>
+  <div class="sources-grid" id="sources"></div>
 
-      - name: Ejecutar radar
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python src/main.py
+  <h2>Cambios detectados</h2>
+  <div id="alerts"></div>
 
-      - name: Guardar historial (data/radar.db y docs/data) en el repo
-        run: |
-          git config user.name "radar-vpo-bot"
-          git config user.email "actions@github.com"
-          git add data/radar.db docs/data
-          git diff --staged --quiet || git commit -m "chore: actualizar historial radar [skip ci]"
-          git push
+  <p class="generated" id="generated"></p>
+</div>
+
+<script>
+async function load() {
+  try {
+    const res = await fetch('data/status.json?t=' + Date.now());
+    const data = await res.json();
+
+    document.getElementById('subtitle').textContent =
+      data.sources.length + ' fuentes oficiales bajo vigilancia · comprobación cada 15 min';
+
+    const sourcesEl = document.getElementById('sources');
+    sourcesEl.innerHTML = data.sources.map(s => {
+      const checked = s.last_checked
+        ? new Date(s.last_checked).toLocaleString('es-ES', { dateStyle: 'short', timeStyle: 'short' })
+        : 'aún no comprobada';
+      return '<div class="source-card">' +
+        '<div class="name"><span class="dot"></span>' + escapeHtml(s.nombre) + '</div>' +
+        '<div class="meta">' + escapeHtml(s.municipio || '') + '</div>' +
+        '<div class="meta">Última comprobación: ' + checked + '</div>' +
+        '</div>';
+    }).join('');
+
+    const alertsEl = document.getElementById('alerts');
+    if (data.alerts.length === 0) {
+      alertsEl.innerHTML = '<div class="empty">No se han detectado novedades todavía. En cuanto una fuente cambie, aparecerá aquí y en Telegram.</div>';
+    } else {
+      alertsEl.innerHTML = data.alerts.map(a => {
+        const date = new Date(a.detected_at).toLocaleString('es-ES', { dateStyle: 'medium', timeStyle: 'short' });
+        return '<div class="alert-card">' +
+          '<div class="alert-top">' +
+            '<span class="badge ' + a.urgencia + '">' + a.urgencia + '</span>' +
+            '<span class="alert-source">' + escapeHtml(a.source_name) + '</span>' +
+          '</div>' +
+          '<div class="alert-municipio">' + escapeHtml(a.municipio || '') + '</div>' +
+          '<div class="alert-resumen">' + escapeHtml(a.resumen) + '</div>' +
+          '<div class="alert-date">' + date + ' &middot; <a href="' + a.url + '" target="_blank" rel="noopener">Ver fuente</a></div>' +
+          '</div>';
+      }).join('');
+    }
+
+    document.getElementById('generated').textContent =
+      'Última actualización del panel: ' + new Date(data.generated_at).toLocaleString('es-ES');
+
+  } catch (e) {
+    document.getElementById('subtitle').textContent = 'No se ha podido cargar el estado todavía. Espera a que corra la primera ejecución del radar (o dale a "Run workflow" en Actions).';
+    document.getElementById('sources').innerHTML = '';
+    document.getElementById('alerts').innerHTML = '';
+  }
+}
+
+function escapeHtml(str) {
+  const div = document.createElement('div');
+  div.textContent = str || '';
+  return div.innerHTML;
+}
+
+load();
+</script>
+</body>
+</html>
