@@ -13,6 +13,8 @@ from adapters import generic_html, bocm
 CONFIG_PATH = Path(__file__).resolve().parent.parent / "config" / "sources.yaml"
 DASHBOARD_DATA_DIR = Path(__file__).resolve().parent.parent / "docs" / "data"
 
+DEFAULT_SIMILARITY_THRESHOLD = 0.97
+
 ADAPTERS = {
     "generic_html": generic_html.check,
     "bocm": bocm.check,
@@ -40,8 +42,8 @@ def resumen_corto(texto: str, max_chars: int = 400) -> str:
 
 
 def export_dashboard_data(conn, cfg):
-    """Escribe docs/data/status.json y docs/data/alerts.json para que el
-    dashboard estático (GitHub Pages) pueda mostrar el estado sin backend."""
+    """Escribe docs/data/status.json para que el dashboard estático
+    (GitHub Pages) pueda mostrar el estado sin backend."""
     DASHBOARD_DATA_DIR.mkdir(parents=True, exist_ok=True)
 
     sources = cfg.get("sources", [])
@@ -85,6 +87,7 @@ def run():
     cfg = load_config()
     conn = db.get_conn()
     sources = cfg.get("sources", [])
+    threshold = cfg.get("similarity_threshold", DEFAULT_SIMILARITY_THRESHOLD)
 
     detected = 0
 
@@ -107,32 +110,30 @@ def run():
             continue
 
         h = db.content_hash(text)
-        is_first_seen = db.has_changed(conn, source_id, h)
+        prev_text, es_baseline_inicial = db.get_previous_text(conn, source_id)
 
-        if is_first_seen:
-            row = conn.execute(
-                "SELECT 1 FROM source_state WHERE source_id = ?", (source_id,)
-            ).fetchone()
-            es_baseline_inicial = row is None
+        if es_baseline_inicial:
+            db.update_state(conn, source_id, h, text)
+            print(f"[INFO] Baseline inicial guardada para {source_id}, sin alerta.")
+            continue
 
-            db.update_state(conn, source_id, h)
+        sim = db.similarity(prev_text, text)
+        db.update_state(conn, source_id, h, text)
 
-            if es_baseline_inicial:
-                print(f"[INFO] Baseline inicial guardada para {source_id}, sin alerta.")
-                continue
+        if sim >= threshold:
+            print(f"[OK] Sin cambios significativos en {source_id} (similitud {sim:.1%})")
+            continue
 
-            urgencia = clasificar_urgencia(text, cfg)
-            resumen = resumen_corto(text)
+        urgencia = clasificar_urgencia(text, cfg)
+        resumen = resumen_corto(text)
 
-            db.record_alert(
-                conn, source_id, source["nombre"], source.get("municipio"),
-                urgencia, resumen, result["url"], h
-            )
-            notifier.send_alert(source["nombre"], source.get("municipio"), urgencia, resumen, result["url"])
-            detected += 1
-            print(f"[ALERTA] {urgencia} - {source['nombre']}")
-        else:
-            print(f"[OK] Sin cambios en {source_id}")
+        db.record_alert(
+            conn, source_id, source["nombre"], source.get("municipio"),
+            urgencia, resumen, result["url"], h
+        )
+        notifier.send_alert(source["nombre"], source.get("municipio"), urgencia, resumen, result["url"])
+        detected += 1
+        print(f"[ALERTA] {urgencia} - {source['nombre']} (similitud {sim:.1%})")
 
     print(f"\nResumen ejecución: {detected} novedad(es) detectada(s) sobre {len(sources)} fuente(s).")
     export_dashboard_data(conn, cfg)
