@@ -1,7 +1,7 @@
 # Cada fuente = un adapter "generic_html" (diff de contenido de una URL)
 # o un adapter específico (bocm, etc). Añadir fuente = añadir entrada aquí.
 # urgencia_keywords: si el texto nuevo contiene alguna, se marca CRITICO automáticamente.
-
+similarity_threshold: 0.97
 sources:
   - id: comunidad_madrid_vivienda_protegida
     nombre: "Comunidad de Madrid - Vivienda Protegida"
